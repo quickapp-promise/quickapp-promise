@@ -28,7 +28,7 @@ export default class QaVideo {
    * |1001|原视频无效，可能原因：传来的文件不是视频|
    */
   compressVideo = () => {
-    return quickPromiseFunctor(this.instance.compressVideo, 'success')();
+    return quickPromiseFunctor(this.instance.compressVideo, 'success', this.instance)();
   }
 
   /**
@@ -40,7 +40,7 @@ export default class QaVideo {
    * |203|找不到任务实例|
    */
   abort = () => {
-    return quickPromiseFunctor(this.instance.abort, 'success')();
+    return quickPromiseFunctor(this.instance.abort, 'success', this.instance)();
   }
 
   /**

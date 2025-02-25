@@ -1,4 +1,4 @@
-type GetOptions<T> = T extends (...args: infer P) => void
+export type GetOptions<T> = T extends (...args: infer P) => void
 ? P[0] extends { [key: string]: any }
 ? Omit<P[0], 'success' | 'fail' | 'cancel' | 'callback' | 'complete'>
 : void
@@ -12,9 +12,11 @@ export type GetCallbackOptions<T, K extends string> = T extends (...args: infer 
 : void
 : void;
 
-export function quickPromiseFunctor<T extends (...args: any) => void>(fn: T, resolveKey: 'success'): (options: GetOptions<T>) => Promise<GetCallbackOptions<T, 'success'>>;
-export function quickPromiseFunctor<T extends (...args: any) => void>(fn: T, resolveKey: 'callback'): (options: GetOptions<T>) => Promise<GetCallbackOptions<T, 'callback'>>;
-export function quickPromiseFunctor<T extends (...args: any) => void>(fn: T, resolveKey: any) {
+export function quickPromiseFunctor<T extends (...args: any) => void>(fn: T, resolveKey: 'success', ctx?: any): (options: GetOptions<T>) => Promise<GetCallbackOptions<T, 'success'>>;
+export function quickPromiseFunctor<T extends (...args: any) => void>(fn: T, resolveKey: 'callback', ctx?: any): (options: GetOptions<T>) => Promise<GetCallbackOptions<T, 'callback'>>;
+export function quickPromiseFunctor<T extends (...args: any) => void>(fn: T, resolveKey: any, ctx?: any) {
+  if (ctx) fn = fn.bind(ctx) as T;
+
   return function(options: GetOptions<T>): Promise<any> {
     return new Promise((resolve, reject) => {
       fn({
