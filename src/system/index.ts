@@ -36,3 +36,7 @@ export { default as QaZip } from './zip';
 export { default as QaKeyguard } from './keyguard';
 export { default as QaScreenshot } from './screenshot';
 export { default as QaNfc } from './nfc';
+export { default as QaCipher } from './cipher';
+export { default as QaMedia } from './media';
+export { default as QaImage } from './image';
+export { default as QaAudio } from './audio';
