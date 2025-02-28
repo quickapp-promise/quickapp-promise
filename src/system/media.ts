@@ -32,4 +32,7 @@ export default {
   pickVideos,
   pickFile,
   saveToPhotosAlbum,
+  previewImage,
+  getRingtone,
+  setRingtone,
 }
