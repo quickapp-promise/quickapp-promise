@@ -25,8 +25,6 @@ jobs:
 
       - run: cp package.json dist
 
-      - run: cd dist
-
       - name: 'Publish to the npm registry'
         uses: qjp88995/publish@master
         env:
@@ -34,3 +32,4 @@ jobs:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
         with:
           default_branch: 'main'
+          dir: './dist'
