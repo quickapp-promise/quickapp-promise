@@ -6,24 +6,20 @@
     "quickapp"
   ],
   "scripts": {
-    "prepare": "npm run build",
     "start": "tsc -w",
     "build": "rimraf dist && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "纯情小牛 <759848795@qq.com> (https://github.com/qjp88995)",
+  "author": "qinjiapeng <759848795@qq.com> (https://github.com/qjp88995)",
   "license": "MIT",
   "homepage": "https://github.com/quickapp-promise/hap",
   "repository": {
     "type": "git",
     "url": "https://github.com/quickapp-promise/hap.git"
   },
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
-    "dist/**/*.js",
-    "dist/**/*.d.ts"
+    "**/*.js",
+    "**/*.d.ts"
   ],
   "devDependencies": {
     "rimraf": "^6.0.1",
