@@ -1,6 +1,6 @@
 {
   "name": "quickapp-promise",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "QuickApp promise interface",
   "keywords": [
     "quickapp"
@@ -12,10 +12,10 @@
   },
   "author": "qinjiapeng <759848795@qq.com> (https://github.com/qjp88995)",
   "license": "MIT",
-  "homepage": "https://github.com/quickapp-promise/hap",
+  "homepage": "https://github.com/quickapp-promise/quickapp-promise",
   "repository": {
     "type": "git",
-    "url": "https://github.com/quickapp-promise/hap.git"
+    "url": "https://github.com/quickapp-promise/quickapp-promise.git"
   },
   "files": [
     "**/*.js",
