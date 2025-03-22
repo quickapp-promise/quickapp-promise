@@ -1,0 +1,1 @@
+# Quickapp promise interface
