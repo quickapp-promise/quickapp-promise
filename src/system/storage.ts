@@ -15,11 +15,11 @@ class QaStorage {
   }
 
   delete(options: GetOptions<typeof storage['delete']>) {
-    quickPromiseFunctor(storage.delete, 'success')(options);
+    return quickPromiseFunctor(storage.delete, 'success')(options);
   }
 
   key(options: GetOptions<typeof storage['key']>) {
-    quickPromiseFunctor(storage.key, 'success')(options);
+    return quickPromiseFunctor(storage.key, 'success')(options);
   }
 
   get length() {
